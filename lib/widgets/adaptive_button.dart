@@ -16,10 +16,9 @@ class AdaptiveButton extends StatelessWidget {
               text,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            onPressed: handler)
-        : FlatButton(
-            textColor: Theme.of(context).primaryColor,
-            onPressed: handler,
+            onPressed: handler())
+        : ElevatedButton(
+            onPressed: handler(),
             child: Text(
               text,
               style: TextStyle(fontWeight: FontWeight.bold),

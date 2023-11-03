@@ -21,11 +21,11 @@ class NewTransaction extends StatefulWidget {
 class _NewTransactionState extends State<NewTransaction> {
   final _titleController = TextEditingController();
   final _amountController = TextEditingController();
-  DateTime _selectedDate;
+  late DateTime _selectedDate;
 
-  _NewTransactionState(){
-    print('Constructor NewTransaction State');
-  }
+  // _NewTransactionState(){
+  //   print('Constructor NewTransaction State');
+  // }
 
   @override
   initState(){
@@ -118,11 +118,9 @@ class _NewTransactionState extends State<NewTransaction> {
                   ],
                 ),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: _submitData,
                 child: const Text('Add Transaction'),
-                color: Theme.of(context).primaryColor,
-                textColor: Theme.of(context).textTheme.button.color,
               )
             ],
           ),
